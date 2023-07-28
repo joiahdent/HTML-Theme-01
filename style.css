@@ -1,0 +1,283 @@
+html,body,div,span,iframe,h1,h2,h3,h4,p,pre,del,em,img,b,i,dl,dt,dd,ol,ul,li,form,table,tbody,tr,th,td,article,aside,footer,header,nav,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;box-sizing:border-box}
+article,aside,footer,header,nav,section{display:block}
+body{line-height:1;overflow-wrap:break-word;word-wrap:break-word}
+input,textarea,select{font-family:inherit;font-size:inherit;color:inherit;vertical-align:middle;box-sizing:border-box}
+a{margin:0;padding:0;text-decoration:none;outline:none;font-size:100%;vertical-align:baseline;background:transparent}
+a img{border-style:none}
+ul,li{list-style-type:none}
+.cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}
+
+/* ===================================
+背景,文字,リンク設定
+=================================== */
+
+html{
+font-size:62.5%
+}
+body{
+background:#000;/* 背景色 */
+color:#fff;/* 文字色 */
+font-size:1.3em;/* 文字の大きさ */
+font-family:'Segoe UI','游ゴシック Medium','Yu Gothic Medium','游ゴシック体',YuGothic,'Hiragino Kaku Gothic ProN','メイリオ',Meiryo,sans-serif;
+letter-spacing:.1em;
+line-height:1.5;
+padding:15px;
+text-align:center
+}
+/*  リンク
+------------------------------ */
+a{
+color:inherit
+}
+#contents a,footer a{
+color:#ce0000
+}
+a:not(.bg-none):hover{
+border-bottom:1px solid #ce0000;
+color:#fff
+}
+
+/* ===================================
+基本
+=================================== */
+
+#wrapper{
+background:#000;
+border:1px dotted #fff;
+margin:10px auto;
+padding:20px;
+text-align:left;
+width:450px /* 全体の幅・大きさはここで変更 */
+}
+footer{
+border-top:1px dotted;
+padding:15px 0 0 80px;
+position:relative;
+text-align:right
+}
+
+/* ===================================
+メニュー
+=================================== */
+
+#menu{
+border-bottom:1px dotted #fff;
+border-top:1px dotted #fff;
+margin:10px 0;
+padding:3px;
+text-align:center;
+width:100%
+}
+nav li{
+display:inline-block
+}
+nav li a{
+color:#fff;
+line-height:2em;
+padding:0 5px
+}
+nav li a:hover{
+color:#ce0000
+}
+#open{display:none}
+
+/* ===================================
+ページ上部へのリンク
+=================================== */
+
+#pagetop{
+background:rgba(206,0,0,.8);/* 背景 */
+color:#fff;/* 色 */
+display:inline-block;
+padding:5px;
+position:absolute;
+text-align:center;
+top:10px;left:0;
+z-index:10
+}
+#pagetop:hover{
+background:rgba(206,0,0,.8)
+}
+
+/* ===================================
+見出し、枠、線
+=================================== */
+
+h1{
+background:url(image/icon01.png) no-repeat  0 50%;
+font-size:1.4em;
+padding:.3em
+}
+h2{
+border-bottom:3px solid #ccc;
+font-size:1.4em;
+margin:15px 0
+}
+h2:first-letter{
+color:#ce0000;
+font-size:1.5em
+}
+h3{
+background:url(image/icon02.png) no-repeat 0 50%;
+border-bottom:1px dotted;
+font-size:1.1em;
+margin:15px 0;
+padding-left:20px
+}
+h3.bl{
+background:url(image/icon03.png) no-repeat 0 50%
+}
+h3:first-letter{
+font-size:1.5em;
+margin-right:.1em
+}
+dt{
+font-weight:700;
+clear:both;
+float:left;
+margin:0 0 5px;
+width:160px
+}
+dd{
+margin:0 0 5px 170px
+}
+em{
+font-style:normal;
+font-weight:700
+}
+input,textarea{
+background:#000;
+border:1px dotted;
+color:#999;
+margin:3px 0;
+width:250px
+}
+textarea{
+height:50px
+}
+hr{
+border:0;
+border-top:1px solid #ccc;
+display:block;
+margin:1em 0;
+padding:0;
+height:1px
+}
+.marker{
+background:#ce0000;
+background:-webkit-linear-gradient(rgba(206,0,0,0) 50%, #ce0000 0%);
+background:linear-gradient(rgba(206,0,0,0) 50%, #ce0000 0%)
+}
+.dcline{
+border-left:5px solid #ce0000;
+margin:5px 0;
+padding:3px
+}
+.textbox{
+border:1px dotted;
+margin:10px 0;
+padding:3px;
+text-align:center
+}
+.title{
+font-size:1.5em;
+font-weight:700;
+margin:2em 0;
+text-align:right
+}
+.txt{
+border-left:1px dotted;
+margin:1em;
+padding:0 0 0 1em
+}
+.frame{
+background:#000;
+border:1px solid;
+box-shadow:4px 4px 5px #ccc;
+padding:6px
+}
+
+/* ===================================
+スマホ、タブレット用
+横幅600pxで切り替え
+=================================== */
+
+@media screen and (max-width: 600px){
+body{
+font-size:1.4em
+}
+#wrapper{
+width:100%
+}
+/* 画像の縮小表示 */
+img{
+height:auto;
+max-width:100%
+}
+dt{float:none;clear:none;width:auto}
+dd{margin-left:20px}
+
+/* ===================================
+スマホ、タブレット用メニュー
+=================================== */
+
+#menu{
+margin-bottom:52px;  /* #openの高さ(32px)+10以上 */
+border:0;
+padding:0;
+text-align:left;
+position:relative
+}
+nav{
+background:#000;
+border:1px solid #fff;
+position:absolute;
+width:100%;
+left:0
+}
+nav ul{
+display:none;
+width:100%
+}
+nav li{
+width:50%  /* 一列ごとにするならここを100% */
+}
+nav li a{
+border-bottom:1px dotted #fff;
+border-left:1px dotted #fff;
+display:block;
+margin:0 0 -1px -1px;
+padding:10px /* 枠の大きさはここを調整 */
+}
+nav li a:hover{
+background:#ce0000;
+color:#000
+}
+/*  メニューを開くボタン
+------------------------------ */
+#open{
+background:#ce0000;
+border:1px solid #fff;
+color:#000;
+display:block;
+position:relative;
+text-align:center;
+height:32px;line-height:32px;
+width:100%
+}
+#open:after{
+background:url(image/nav-icon.png) no-repeat 10px 50%;
+content:"";
+display:inline-block;
+position:absolute;
+right:0;top:0;
+height:32px;width:100%
+}
+}
+/* ===================================
+スマホ、タブレット用
+横幅480pxで切り替え
+=================================== */
+@media screen and (max-width: 480px){
+nav li{width:100%}
+}
